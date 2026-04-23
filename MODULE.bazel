@@ -1,0 +1,7 @@
+module(name = 'ttools', version = '0.0.1')
+
+# Build dependencies.
+bazel_dep(name = "rules_cc", version = "0.2.16")
+
+# FTXUI
+bazel_dep(name = "ftxui", version = "6.1.9")

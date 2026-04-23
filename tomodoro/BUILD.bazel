@@ -1,0 +1,22 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+
+cc_library(
+  name = "timer",
+  srcs = ["libs/timer.cc"],
+  hdrs = ["libs/timer.h"],
+  visibility = ["//visibility:private"],
+)
+
+cc_library(
+  name = "parser",
+  srcs = ["libs/parser.cc"],
+  hdrs = ["libs/parser.h"],
+  deps = [":timer"],
+  visibility = ["//visibility:private"],
+)
+
+cc_binary(
+  name = "tomodoro",
+  srcs = ["main.cc"],
+  deps = [":timer", ":parser"],
+)

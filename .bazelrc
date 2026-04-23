@@ -1,0 +1,9 @@
+build --cxxopt=-std=c++20
+build --host_cxxopt=-std=c++20
+
+build --incompatible_strict_action_env
+
+build --show_progress_rate_limit=0.2
+
+common --color=yes
+

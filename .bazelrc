@@ -6,4 +6,6 @@ build --incompatible_strict_action_env
 build --show_progress_rate_limit=0.2
 
 common --color=yes
+common --incompatible_load_python_rules_from_bzl=false
+common --enable_bzlmod=true
 
